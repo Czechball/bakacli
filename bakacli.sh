@@ -5,6 +5,18 @@
 input=""
 login="<nepřihlášen>"
 
+xidelCheck ()
+{
+	if command -v xidel
+	then
+		:
+	else
+		printf "Xidel není instalován\n"
+		printf "Můžete si ho stáhnout z http://videlibri.sourceforge.net/xidel.html#downloads\n"
+		exit
+	fi
+}
+
 login()
 {
 	printf "Login"
@@ -19,5 +31,5 @@ shell()
 	done
 }
 
-
+xidelCheck
 shell
