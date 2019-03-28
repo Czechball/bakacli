@@ -7,7 +7,7 @@ login="<nepřihlášen>"
 
 xidelCheck ()
 {
-	if command -v xidel
+	if command -v xidel > /dev/null
 	then
 		:
 	else
