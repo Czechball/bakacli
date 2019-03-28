@@ -10,31 +10,21 @@ date=$(date +%Y%m%d)
 
 dependencycheck ()
 {
-	if command -v xidel > /dev/null
+if ! command -v curl > /dev/null;
 	then
-		:
-	else
-		printf "Xidel není instalován\n"
-		printf "Můžete si ho stáhnout z http://videlibri.sourceforge.net/xidel.html#downloads\n"
-	fi
-	if command -v curl > /dev/null
+		printf "curl není nainstalován\n"
+		exit
+	elif ! command -v whois > /dev/null;
 	then
-		:
-	else
-		printf "Curl není nainstalován.\n"
-	fi
-	if command -v mkpasswd > /dev/null
+		printf "whois není nainstalován\n"
+		exit
+	elif ! command -v xidel > /dev/null;
 	then
-		:
-	else
-		printf "Příkaz mkpasswd nenalezen. Prosím instalujte whois.\n"
-	fi
-	if [[ failed == 1 ]]
-	then
+		printf "Xidel není inanstalován\n"
 		exit
 	else
 		:
-	fi
+fi
 }
 
 getloginurl()
