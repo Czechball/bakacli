@@ -8,4 +8,4 @@
 - Xidel ([ke stažení zde](http://videlibri.sourceforge.net/xidel.html#downloads))
 
 
-# *COMING SOON*
+# *NOT COMING SOON, THIS IS STUPID*
